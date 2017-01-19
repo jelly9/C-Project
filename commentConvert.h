@@ -10,6 +10,8 @@
 #define INPUT_FILE "input.c"
 #define OUTPUT_FILE "output.c"
 
+
+//×´Ì¬³£Á¿
 typedef enum STATUS
 {
 	NORMAL_STATUS,

@@ -7,7 +7,6 @@ int main()
 	convertBagin();
 	printf("Done...\n");
 
-	getchar();
 	system("pause");
 	return 0;
 }

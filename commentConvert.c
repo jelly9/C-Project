@@ -109,7 +109,7 @@ static void statusMachine(FILE* in, FILE* out)
 	assert(in);
 	assert(out);
 
-	while(END_STATUS != gStatus){
+	while(END_STATUS != gStatus){//根据状态进入相应逻辑
 		switch(gStatus){
 		case NORMAL_STATUS:
 			doNormalStatus(in, out);
@@ -132,7 +132,7 @@ static void statusMachine(FILE* in, FILE* out)
 void convertBagin()
 {
 	FILE* in = fopen(INPUT_FILE, "r");
-	FILE* out = fopen(OUTPUT_FILE, "w");
+	FILE* out = fopen(OUTPUT_FILE, "w");//打开要转换的文件
 
 	if(NULL == in){
 		perror("fopen");
@@ -144,24 +144,11 @@ void convertBagin()
 		exit(2);
 	}
 
-	statusMachine(in, out);
+	statusMachine(in, out);//进入状态机开始转换
 
 	fclose(in);
-	fclose(out);
+	fclose(out);//关闭文件
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
